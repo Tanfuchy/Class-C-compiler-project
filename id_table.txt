@@ -1,0 +1,6 @@
+ans
+f
+m
+main
+n
+t

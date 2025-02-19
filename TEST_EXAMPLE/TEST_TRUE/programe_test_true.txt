@@ -1,0 +1,35 @@
+int main()
+{
+    int ans;
+    int m;
+    int n;
+    int t;
+    double f;
+    f = 3.141e2;
+    m = 1;
+    t = 0;
+    ans = 0;
+    cin >> n;
+    ans = ans +10 + m;
+    ans = ans +m;
+    while(n > 0)
+    {
+        ans = ans * 10 + n % 10;
+        n = n / 10;
+    }
+    for(m = 10;m>0;m--)
+    {
+        t = t + 2;
+        if(t<10)
+        {
+                t = t + 10;
+                f = f +1.2;
+        }
+        else {
+                 t = t - 5;
+        }
+    }
+   
+    cout << ans << t << f;
+    return 0;
+}

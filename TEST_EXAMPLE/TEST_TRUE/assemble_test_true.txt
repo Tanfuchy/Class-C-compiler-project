@@ -1,0 +1,80 @@
+                            Assemble_code                          
+===================================================================
+(0)   MOV   f , 3.141e2
+(1)   MOV   m , 1
+(2)   MOV   t , 0
+(3)   MOV   ans , 0
+(4)   IN   n
+(5)   MOV   R0 , ans
+(6)   ADD   R0 , 10
+(7)   MOV   T0 , R0
+(8)   MOV   R1 , T0
+(9)   ADD   R1 , m
+(10)   MOV   T1 , R1
+(11)   MOV   ans , T1
+(12)   MOV   R2 , ans
+(13)   ADD   R2 , m
+(14)   MOV   T2 , R2
+(15)   MOV   ans , T2
+(16)   CMP   n , 0
+(17)   JG   (20)
+(18)   MOV   T3 , 0
+(19)   J   (21)
+(20)   MOV   T3 , 1
+(21)   CMP   T3 , 1
+(22)   JZ   (23)
+(23)   JMP   (39)
+(24)   MOV   R4 , ans
+(25)   MUL   R4 , 10
+(26)   MOV   T4 , R4
+(27)   MOV   R5 , n
+(28)   MOD   R5 , 10
+(29)   MOV   T5 , R5
+(30)   MOV   R6 , T4
+(31)   ADD   R6 , T5
+(32)   MOV   T6 , R6
+(33)   MOV   ans , T6
+(34)   MOV   R7 , n
+(35)   DIV   R7 , 10
+(36)   MOV   T7 , R7
+(37)   MOV   n , T7
+(38)   JMP   (10)
+(39)   MOV   m , 10
+(40)   CMP   m , 0
+(41)   JG   (44)
+(42)   MOV   T8 , 0
+(43)   J   (45)
+(44)   MOV   T8 , 1
+(45)   CMP   T8 , 1
+(46)   JZ   (47)
+(47)   JMP   (39)
+(48)   MOV   R9 , t
+(49)   ADD   R9 , 2
+(50)   MOV   T10 , R9
+(51)   MOV   t , T10
+(52)   CMP   t , 10
+(53)   JNG   (56)
+(54)   MOV   T11 , 0
+(55)   J   (57)
+(56)   MOV   T11 , 1
+(57)   CMP   T11 , 1
+(58)   JZ   (60)
+(59)   JMP   (35)
+(60)   MOV   R11 , t
+(61)   ADD   R11 , 10
+(62)   MOV   T12 , R11
+(63)   MOV   t , T12
+(64)   MOV   R12 , f
+(65)   ADD   R12 , 1.2
+(66)   MOV   T13 , R12
+(67)   MOV   f , T13
+(68)   JMP   (37)
+(69)   MOV   R13 , t
+(70)   SUB   R13 , 5
+(71)   MOV   T14 , R13
+(72)   MOV   t , T14
+(73)   MOV   m , T9
+(74)   JMP   (21)
+(75)   OUT   ans
+(76)   OUT   t
+(77)   OUT   f
